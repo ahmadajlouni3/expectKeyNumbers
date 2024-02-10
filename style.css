@@ -1,0 +1,90 @@
+body{
+    padding:0;
+    margin:0;
+}
+.App{
+    padding:50px;
+    width: 40%;
+    margin:auto;
+    margin-top:50px;
+    font:normal normal bold 18px/1.2 arial;
+    border:2px dashed black;
+}
+.Container{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns:30% 70%;
+}
+.Container div{
+    display: grid;
+    justify-content: center;
+    padding:10px;
+}
+.Container .inputCont{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputCont input{
+    font-size:20px;
+
+}
+
+
+#MSG{
+    display:none;
+    width:40%;
+    background-color: mediumseagreen;
+    color:white;
+    border-radius:5px;
+    font:italic small-caps bold 25px/1.2 arial;
+    padding:40px 80px;
+    margin:auto;
+    margin-top: 20px;
+    text-align: center;
+    text-shadow: 0px 0px 5px black;
+    box-shadow: 0px 0px 5px 1px black;
+    animation: 0.2s 5 paused;
+}
+
+
+
+@media only screen and (max-width:600px){
+    .App{
+        border: none;
+    }
+    .Container{
+        display:flex;
+        flex-flow:column-reverse nowrap;
+        text-align: center;
+        border:2px dashed black;
+        margin:20px 0px;
+    }
+    #MSG{
+        font-size:18px;
+    }
+}
+
+@keyframes greenLighter{
+    0%{
+        background-color: mediumseagreen;
+    }
+    50%{
+        background-color: aquamarine;
+    }
+    100%{
+        background-color: mediumseagreen;
+    }
+}
+@keyframes redLighter{
+    0%{
+        background-color: red;
+    }
+    50%{
+        background-color: tomato;
+    }
+    100%{
+        background-color: red;
+    }
+}
