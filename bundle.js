@@ -39,16 +39,29 @@ document.getElementById('enter').addEventListener("click" , ()=>{
         document.getElementById("MSG").innerText = msg[0];
         document.getElementById("MSG").style.backgroundColor = 'mediumseagreen';
         document.getElementById("MSG").style.display = 'block';
+        document.getElementsByClassName("OpacityDiv")[0].style.display = 'block';
         document.getElementById("MSG").style.animationPlayState = 'running';
         document.getElementById("MSG").style.animationName = 'greenLighter';
     }else{
         document.getElementById("MSG").innerText = msg[1];
         document.getElementById("MSG").style.backgroundColor = 'tomato';
         document.getElementById("MSG").style.display = 'block';
+        document.getElementsByClassName("OpacityDiv")[0].style.display = 'block';
         document.getElementById("MSG").style.animationPlayState = 'running';
         document.getElementById("MSG").style.animationName = 'redLighter';
         setTimeout(()=> {
             document.getElementById("MSG").style.display = 'none';
+            document.getElementsByClassName("OpacityDiv")[0].style.display = 'none';
         } , 1500)
     }
+})
+
+
+document.getElementsByClassName("OpacityDiv")[0].addEventListener("click" , function(){
+    document.getElementById("MSG").style.display = 'none';
+    document.getElementsByClassName("OpacityDiv")[0].style.display = 'none';
+})
+document.getElementById("MSG").addEventListener("click" , function(){
+    document.getElementById("MSG").style.display = 'none';
+    document.getElementsByClassName("OpacityDiv")[0].style.display = 'none';
 })
